@@ -1,0 +1,375 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li { list-style: none; }
+
+button {
+    color: inherit;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+    border: none;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 280px;
+}
+
+::-webkit-scrollbar { width: 10px; }
+
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: white; 
+    border: solid 1px black;
+}
+
+::-webkit-scrollbar-button { height: 5px; }
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* фоновый цвет */
+    background: #fff;
+    z-index: 1001;
+  }
+  
+  .preloader__image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
+
+
+.container {
+    padding: 0 200px;
+}
+
+
+
+.main-section {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-section {
+    padding-bottom: 70px;
+}
+
+
+nav {
+    margin: 40px 0;
+}
+
+
+.navbar-list li {
+    font-weight: 500;
+    margin-top: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.navbar-list li:first-child {
+    margin: 0;
+}
+
+.navbar-link {
+    border: 3px solid black;
+    border-top-color: white;
+    border-bottom-color: black;
+    border-left-color: white;
+    border-left-width: 0;
+    border-top-width: 0;
+    padding: 10px 15px;
+    transition: .15s ease-in-out;
+    
+}
+
+.navbar-link:hover {
+    color: white;
+    background: black;
+}
+
+.aboutme {
+    background: black;
+    color: white;
+    padding: 75px 0;
+    position: relative;
+}
+
+.aboutme .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme .aboutme-text {
+    text-align: center;
+    max-width: 1000px;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 75px;
+}
+
+.content .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    margin-left: 50px;
+}
+
+.name h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+
+.content img {
+    width: 120px;
+    border-radius: 60px;
+}
+
+.myprojects {
+    min-height: 100vh;
+    padding: 75px 0;
+    color: white;
+    background: black;
+}
+
+.myprojects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myprojects-title p {
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.myprojects-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.myprojects-card {
+    max-width: 320px;
+    background: #262626;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(29, 29, 29);
+    border-radius: 10px;
+    color: rgb(206, 206, 206);
+}
+
+.card-preview {
+    margin: 10px 0 15px;
+    min-height: 170px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.check-btn {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    text-transform: capitalize;
+    transition: .15s ease-in-out;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: #262626;
+    opacity: 0;
+}
+
+.check-btn a {
+    color: rgb(206, 206, 206);
+}
+
+.card-preview:is(:hover, :focus) .check-btn, .check-btn:focus {
+    opacity: 1;
+    transform: translate(-0%, -105%);
+}
+
+.card-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-name p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.project-description p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.livestream {
+    padding: 75px 0;
+}
+
+.livestream .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.livestream-title {
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.livestream-videoplayer {
+    width: 854px;
+    height: 480px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.contacts {
+    background: #ddd;
+    padding: 75px 0;
+}
+
+.contacts-text p {
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.contacts-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+    align-items: center;
+}
+
+.widgetbot {
+    position: relative;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.widgetbot::after {
+    content: "";
+    background: black;
+    position: absolute;
+    top: 0;
+    display: block;
+
+}
+
+.links .icons {
+    background: #fff;
+    padding: 30px;
+    border-radius: 80px;
+    font-size: 80px;
+    transition: .15s ease-in-out;
+    margin: 10px 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.links .icons:hover {
+    background: black;
+    color: white;
+}
+
+.go-top {
+    background: black;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 1000;
+}
+
+.go-top.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.go-top:hover { background: white; color: black; }
